@@ -2,9 +2,7 @@
   "name": "react-native-logs-harvester",
   "version": "0.1.0",
   "description": "Logs harvest",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
+  "main": "src/index.tsx",
   "react-native": "src/index",
   "source": "src/index",
   "files": [
@@ -126,24 +124,14 @@
     "lib/"
   ],
   "prettier": {
-    "quoteProps": "consistent",
+    "bracketSpacing": false,
+    "jsxBracketSameLine": true,
     "singleQuote": true,
+    "trailingComma": "all",
     "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
-    ]
+    "semi": false,
+    "printWidth": 80,
+    "jsxSingleQuote": true,
+    "endOfLine": "auto"
   }
 }
