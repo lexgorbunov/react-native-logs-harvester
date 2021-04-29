@@ -1,6 +1,5 @@
 import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import LogsHarvester from 'react-native-logs-harvester';
 
 export default function App() {
