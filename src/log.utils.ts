@@ -6,6 +6,7 @@ import {
   getSystemVersion,
   getVersion,
 } from 'react-native-device-info'
+import prompt from 'react-native-prompt-android'
 import RNFetchBlob, {RNFetchBlobStat} from 'rn-fetch-blob'
 
 import LogsHarvester from './index'
@@ -118,3 +119,20 @@ export const sendLogs = async (
     return false
   }
 }
+
+export const promptLogsCount = (): Promise<number | null> =>
+  new Promise<number | null>((resolve, _) => {
+    prompt(
+      "Send several log's sessions",
+      "How many log's sessions do you want to send",
+      (countStr) => {
+        const count = parseInt(countStr)
+        if (isNaN(count)) return
+        resolve(count)
+      },
+      {
+        type: 'numeric',
+        defaultValue: '3',
+      },
+    )
+  })

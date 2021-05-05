@@ -7500,6 +7500,11 @@ react-native-logs@^3.0.3:
   resolved "https://registry.yarnpkg.com/react-native-logs/-/react-native-logs-3.0.3.tgz#10bc6a24010dad2bcf9b3b7eacc27f6a3796ed01"
   integrity sha512-Fnkoe9f1taxY8MiONGdPVaQPDml01i7oSYY+pxk/2fthJv24Z/Tlw22p8dgkuJ3SiwBHc71WlzQ4asKR5FPKbw==
 
+react-native-prompt-android@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-prompt-android/-/react-native-prompt-android-1.1.0.tgz#3c5168029075cb9f72549fd5f92403372fb234e9"
+  integrity sha512-4JoyEaT2ZnK9IH+tDFpbTiQBgva8UIFGQf4/Uw/tnEVWBERlVlzcs5B82T9BkeEhEqXhp89JaiSBnLWj30lciw==
+
 react-native@0.63.4:
   version "0.63.4"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.63.4.tgz"
