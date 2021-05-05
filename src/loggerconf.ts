@@ -1,17 +1,11 @@
-import RNFS from 'react-native-fs'
-import {
-  configLoggerType,
-  consoleTransport,
-  fileAsyncTransport,
-  logger,
-} from 'react-native-logs'
+import {configLoggerType, consoleTransport, logger} from 'react-native-logs'
 import RNFetchBlob from 'rn-fetch-blob'
 
 const fs = RNFetchBlob.fs
 
 const consoleAndFileAsyncTransport = (props: any) => {
   consoleTransport(props)
-  fileAsyncTransport(props)
+  // fileAsyncTransport(props)
 }
 
 const today = new Date()
@@ -32,8 +26,8 @@ const loggerConfig: configLoggerType = {
   },
   transportOptions: {
     colors: null,
-    FS: RNFS,
-    fileName: LOG_FILE_NAME,
+    // FS: RNFS,
+    // fileName: LOG_FILE_NAME,
     dateFormat: 'time',
     printLevel: true,
   },
