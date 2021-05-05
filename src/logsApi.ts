@@ -11,6 +11,14 @@ export const uploadLogs = async (
   const bearer = bearerHeader
   const userAgent = await getUserAgent()
   for (const file of logFiles) {
+    const body = [
+      {name: 'body', data: logInfo},
+      {
+        name: 'file',
+        filename: file.filename,
+        data: RNFetchBlob.wrap(file.path),
+      },
+    ]
     const response = await RNFetchBlob.fetch(
       'POST',
       uploadUrl,
@@ -19,14 +27,7 @@ export const uploadLogs = async (
         'User-Agent': userAgent,
         ...(bearer ?? {}),
       },
-      [
-        logInfo,
-        {
-          name: file.filename,
-          filename: file.filename,
-          data: RNFetchBlob.wrap(file.path),
-        },
-      ],
+      body,
     )
     if (response.info().status !== 200) {
       allSentSuccessful = false
