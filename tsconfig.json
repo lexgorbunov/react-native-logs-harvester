@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-logs-harvester": ["./src/index"]
+      "react-native-logs-harvester": ["./src/index", "./src/log.utils", "./src/loggerconf"]
     },
 //    "allowJs": true,
     "allowUnreachableCode": false,
