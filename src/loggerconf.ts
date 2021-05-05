@@ -1,3 +1,4 @@
+import RNFS from 'react-native-fs'
 import {
   configLoggerType,
   consoleTransport,
@@ -31,7 +32,7 @@ const loggerConfig: configLoggerType = {
   },
   transportOptions: {
     colors: null,
-    FS: fs,
+    FS: RNFS,
     fileName: LOG_FILE_NAME,
     dateFormat: 'time',
     printLevel: true,
