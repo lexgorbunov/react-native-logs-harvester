@@ -1,9 +1,10 @@
-import { NativeModules } from 'react-native';
+import {NativeModules} from 'react-native'
 
 type LogsHarvesterType = {
-  multiply(a: number, b: number): Promise<number>;
-};
+  /** For Android only */
+  readLogcat(): Promise<string>
+}
 
-const { LogsHarvester } = NativeModules;
+const {LogsHarvester} = NativeModules
 
-export default LogsHarvester as LogsHarvesterType;
+export default LogsHarvester as LogsHarvesterType

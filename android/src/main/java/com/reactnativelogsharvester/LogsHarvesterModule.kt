@@ -11,14 +11,11 @@ class LogsHarvesterModule(reactContext: ReactApplicationContext) : ReactContextB
         return "LogsHarvester"
     }
 
-    // Example method
-    // See https://reactnative.dev/docs/native-modules-android
+    /** For Android only */
     @ReactMethod
-    fun multiply(a: Int, b: Int, promise: Promise) {
-    
-      promise.resolve(a * b)
-    
+    fun readLogcat(promise: Promise) {
+        logsHandler.post {
+            saveLogcatSessionToFile(reactApplicationContext.baseContext, promise::resolve)
+        }
     }
-
-    
 }

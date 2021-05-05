@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* LogsHarvester.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* LogsHarvester.m */; };
-		F4FF95D7245B92E800C19C63 /*  LogsHarvester.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  LogsHarvester.swift */; };
-
+		92885A20B1D94A969965BA05 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4876E3B773D94956B69A1F2F /* libRNFS.a */; };
+		C15354DA8E7E5D79B639998E /* libPods-LogsHarvester.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F733AAE99C31732FD48130DE /* libPods-LogsHarvester.a */; };
+		F4FF95D7245B92E800C19C63 /* LogsHarvester.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* LogsHarvester.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,11 +26,14 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libLogsHarvester.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLogsHarvester.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
+		441A68CB286119FD93D9E9B5 /* Pods-LogsHarvester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogsHarvester.debug.xcconfig"; path = "Target Support Files/Pods-LogsHarvester/Pods-LogsHarvester.debug.xcconfig"; sourceTree = "<group>"; };
+		4876E3B773D94956B69A1F2F /* libRNFS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = archive.ar; name = libRNFS.a; path = libRNFS.a; sourceTree = "<group>"; };
+		80F14E16718D43529344904F /* RNFS.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFS.xcodeproj; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* LogsHarvester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogsHarvester.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* LogsHarvester-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogsHarvester-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* LogsHarvester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsHarvester.swift; sourceTree = "<group>"; };
-
+		F733AAE99C31732FD48130DE /* libPods-LogsHarvester.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogsHarvester.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB573DBDABA2FED78B945B8 /* Pods-LogsHarvester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogsHarvester.release.xcconfig"; path = "Target Support Files/Pods-LogsHarvester/Pods-LogsHarvester.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92885A20B1D94A969965BA05 /* libRNFS.a in Frameworks */,
+				C15354DA8E7E5D79B639998E /* libPods-LogsHarvester.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,16 +57,44 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		21E4A64AE131487F875A9F11 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				80F14E16718D43529344904F /* RNFS.xcodeproj */,
+			);
+			name = Libraries;
+			path = "";
+			sourceTree = "<group>";
+		};
+		24468A8166FE128AF20F379B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				441A68CB286119FD93D9E9B5 /* Pods-LogsHarvester.debug.xcconfig */,
+				FCB573DBDABA2FED78B945B8 /* Pods-LogsHarvester.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
 				F4FF95D6245B92E800C19C63 /* LogsHarvester.swift */,
 				B3E7B5891CC2AC0600A0062D /* LogsHarvester.m */,
 				F4FF95D5245B92E700C19C63 /* LogsHarvester-Bridging-Header.h */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
+				21E4A64AE131487F875A9F11 /* Libraries */,
+				24468A8166FE128AF20F379B /* Pods */,
+				D25BD8A1856B3A483A00CB39 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		D25BD8A1856B3A483A00CB39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F733AAE99C31732FD48130DE /* libPods-LogsHarvester.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +104,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "LogsHarvester" */;
 			buildPhases = (
+				54AFC49E496DBCE8A6DEA3C8 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -91,7 +124,7 @@
 		58B511D31A9E6C8500147676 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 920;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
@@ -117,15 +150,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54AFC49E496DBCE8A6DEA3C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LogsHarvester-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				F4FF95D7245B92E800C19C63 /* LogsHarvester.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* LogsHarvester.m in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +282,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 441A68CB286119FD93D9E9B5 /* Pods-LogsHarvester.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -234,20 +290,22 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/LogsHarvester\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = LogsHarvester;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "LogsHarvester-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCB573DBDABA2FED78B945B8 /* Pods-LogsHarvester.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -255,14 +313,15 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/LogsHarvester\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = LogsHarvester;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "LogsHarvester-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Release;
 		};

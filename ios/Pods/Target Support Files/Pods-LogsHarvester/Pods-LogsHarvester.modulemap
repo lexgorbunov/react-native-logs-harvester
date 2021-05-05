@@ -1,0 +1,6 @@
+module Pods_LogsHarvester {
+  umbrella header "Pods-LogsHarvester-umbrella.h"
+
+  export *
+  module * { export * }
+}
